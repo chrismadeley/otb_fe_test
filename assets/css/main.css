@@ -1,0 +1,231 @@
+:root {
+    /* colours */
+    --otb__darkblue: #17317f;
+    --otb__darkgrey: #333;
+    --otb__gold: #fedc08;
+    --otb__lightblue: #9999cc;
+    --otb__lightgrey: #999;
+
+    /* font sizes */
+    --otb__largefont: 1.2rem;
+    --otb__mediumfont: 1.1rem;
+    --otb__smallfont: 0.85rem;
+}
+
+body {
+    background-image: linear-gradient(#00b5ea 1.1%, #5dc4ee 9.5%, #85d2f1 18.5%, #79c5e8 28.7%, #72c3e6 29.1%, #6fc3e5 0, #44b4dc 30.9%, #45b6d6 31.5%, #b6ecec 40.9%, #eaeee8 51.2%, #fafbf8 57.7%, #fdfdfd 80%, #fff);
+    background-repeat: no-repeat;
+    background-size: 100% 100rem;
+    color: var(--otb__darkgrey);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 100%;
+}
+
+a {
+    color: var(--otb__darkblue);
+    font-size: var(--otb__smallfont);
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+}
+
+h1 {
+    color: var(--otb__darkblue);
+    font-size: var(--otb__largefont);
+    margin: 1.3rem 0 0.5rem 0;
+}
+
+h2 {
+    color: var(--otb__lightgrey);
+    font-size: var(--otb__smallfont);
+    margin: 0;
+}
+
+h3 {
+    color: var(--otb__darkblue);
+    font-size: var(--otb__smallfont);
+}
+
+main {
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-column-gap: 4rem;
+    grid-template-columns: 300px 800px;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.otb__sort li {
+    background-position: 90%;
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+    cursor: pointer;
+}
+
+.sort__alpha {
+    background: url(../imgs/az.svg);
+}
+
+.sort__price {
+    background: url(../imgs/pound.svg);
+}
+
+.sort__star {
+    background: url(../imgs/star.svg);
+}
+
+aside {
+    grid-column: 1 / 2;
+}
+
+article {
+    background-color: white;
+    display: grid;
+    grid-column: 2 / 2;
+    grid-template-columns: 500px auto;
+}
+
+article p {
+    font-size: var(--otb__smallfont);
+    margin: 0.35rem 0;
+}
+
+article img {
+    height: 100%;
+    width: 100%;
+}
+
+article div:first-child {
+    position: relative;
+}
+
+article div:first-child p {
+    background-color: white;
+    bottom: 0;
+    color: var(--otb__darkblue);
+    cursor: pointer;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    width: 40%;
+}
+
+article div.hotel_details {
+    margin: 0 auto;
+}
+
+article div.show_hide {
+    background-color: white;
+    display: none;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    padding: 0 1rem 1rem;
+}
+
+*[class^='otb__chevron'] {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.otb__chevron {
+    height: 24px;
+    transform: rotate(90deg);
+    vertical-align: middle;
+    width: 24px;
+}
+
+.otb__chevron-down {
+    transform: rotate(180deg);
+}
+
+.otb__price {
+    display: block;
+    font-size: var(--otb__largefont);
+}
+
+ul.otb__sort {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.otb__sort li {
+    background-color: white;
+    color: var(--otb__darkblue);
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+ul.otb__sort li.active {
+    background-color: var(--otb__darkblue);
+    color: white;
+}
+
+ul.otb__sort li:nth-child(2) {
+    border-bottom: 2px solid var(--otb__lightblue);
+    border-top: 2px solid var(--otb__lightblue);
+}
+
+.otb__button {
+    background-color: var(--otb__gold);
+    border-radius: 5px;
+    display: block;
+    font-weight: bold;
+    margin: 1rem 0;
+    padding: 0.75em 0;
+    text-align: center;
+    width: 265px;
+}
+
+.gold {
+    color: var(--otb__gold);
+}
+
+.darkblue {
+    color: var(--otb__darkblue);
+}
+
+.lightblue {
+    color: var(--otb__lightblue);
+}
+
+.lightgrey {
+    color: var(--otb__lightgrey);
+}
+
+*[class^='otb__stars-'] {
+    display: block;
+    font-size: var(--otb__largefont);
+    margin: 0.5rem 0;
+}
+
+.otb__stars-5::after {
+    content: "\2605\2605\2605\2605\2605";
+}
+
+.otb__stars-4::after {
+    content: "\2605\2605\2605\2605";
+}
+
+.otb__stars-3::after {
+    content: "\2605\2605\2605";
+}
+
+@media screen and (max-width: 1200px) {
+
+    main {
+        grid-template-columns: 95%;
+    }
+
+    aside {
+        grid-column: 1 / 1;
+    }
+
+    article {
+        grid-column: 1 / 1;
+    }
+}
